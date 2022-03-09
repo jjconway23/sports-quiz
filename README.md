@@ -55,3 +55,13 @@ This is a sports quiz website that allows the user to play a interesting sports 
 - The question displays just below the nav.
 - User is then given four answers to choose from. 
 <img src="assets/images/readme-pictures/question-one.PNG">
+
+#### Results Section
+- The results section shows the user score, shows a congratulatory message and others the user to take quiz again with the play again button.
+- This then sets everything back to zero and user can try again at the quiz.
+<img src="assets/images/readme-pictures/results-page.PNG">
+
+#### Footer
+- The footer has links which use font awesome fonts for facebook, youtube, twitter and instagram accounts.
+- When links are clicked on they open our social media accounts in a new tab.
+<img src="assets/images/readme-pictures/footer.PNG">

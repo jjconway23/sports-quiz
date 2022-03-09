@@ -122,3 +122,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     1. As a Frequent User, I want to check to see if there are new games added.
 
         1. The user would remember how to navigate through the site.
+    
+### Further Testing
+
+-   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge browsers.
+-   The website was viewed on a variety of devices such as iMac, Laptop, iPhone XS Max, iPhone 12.
+-   A large amount of testing was done to ensure that all pages were linking correctly.
+-   Elderly family members were asked to attempt to navigate through site and done so with ease.

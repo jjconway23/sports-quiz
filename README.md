@@ -159,3 +159,9 @@ The project was deployed to GitHub Pages using the following steps...
 ### Media
 
 -   
+### Acknowledgements
+- Kevin Powells Youtube videos
+-   Tutor support at Code Institute for their support.
+- W3c
+- Scrimba
+- Codecademy

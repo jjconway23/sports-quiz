@@ -91,3 +91,28 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### CSS Validator
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjconway23.github.io%2Fportfolio-project-2%2F&profile=css3svg&usermedium=all&warning=no&vextwarning=&lang=en)
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### First Time Visitor Goals
+
+    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about quiz in question.
+
+        1. Upon entering the site, users are automatically greeted with a clean and easily readable header and navigation bar to go to the page of their choice.
+        2. The main points on the homepage are the instructions button and play game button.
+        3. The user can either click the play now button or use the game page link in the navigation bar at the top of the page.
+
+    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
+
+        1. The website is fluid, designed with UX at the top of my priorities. Each page has  navigation bar, each link descriptive and is designed so that the user can easily remember the design of my page after a couple clicks.
+        2. At the bottom of each page there is links to our social media accounts.
+        
+    3. As a First Time Visitor, I want to look for a link directing me to what ive come to the site for. Attempting my Quiz.
+        1. Once the new visitor has arrived on the page they are immediately met with a header that explains what the site is for. 
+        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
+
+-   #### Returning Visitor Goals
+
+    1. As a Returning Visitor, I want play quiz again to test my knowledge.
+
+        1. Responsive site can be played again on any device screen size.

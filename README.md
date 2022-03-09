@@ -116,3 +116,9 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     1. As a Returning Visitor, I want play quiz again to test my knowledge.
 
         1. Responsive site can be played again on any device screen size.
+
+-   #### Frequent User Goals
+
+    1. As a Frequent User, I want to check to see if there are new games added.
+
+        1. The user would remember how to navigate through the site.

@@ -30,3 +30,16 @@ This is a sports quiz website that allows the user to play a interesting sports 
         -   Two google fonts were used in making this website. Big Shoulders Display for the headings and Lexend Deca for the rest of the text across the website. Sans Serif and cursive as the fallback font in case for any reason the font isn't being imported into the site correctly. 
     -   #### Imagery
         -   No images were used when creating this website, a font awesome icon however is used in the main heading.
+
+## Features
+### Home Page
+
+#### Navigation
+- Positioned at the top of the page. On the left it has the site name Sports Quiz along with the slogan sligtly below it. 
+- To the right it has the two main pages of the site. Home Page and Game Page. With an underline under the current page the visitor is on.
+<img src="assets/images/readme-pictures/home-page.PNG">
+
+#### Instructions Button 
+- This button opens a modal to display the quiz game instructions, there is close insructions button that closes modal and displays home page again.
+- There is a play game button that directs the user to the game page.
+<img src="assets/images/readme-pictures/instructions.PNG">

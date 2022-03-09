@@ -129,3 +129,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The website was viewed on a variety of devices such as iMac, Laptop, iPhone XS Max, iPhone 12.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
 -   Elderly family members were asked to attempt to navigate through site and done so with ease.
+
+### Known Bugs
+
+-   Margin issue on smaller screens

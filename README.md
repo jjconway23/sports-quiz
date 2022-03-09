@@ -88,3 +88,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### HTML Validator
 -   [W3C HTML Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjjconway23.github.io%2Fportfolio-project-2%2F)
+
+### CSS Validator
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjjconway23.github.io%2Fportfolio-project-2%2F&profile=css3svg&usermedium=all&warning=no&vextwarning=&lang=en)

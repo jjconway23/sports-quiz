@@ -152,3 +152,10 @@ The project was deployed to GitHub Pages using the following steps...
 ### Code
 
 -   The code used to create the timer was taken from [W3C schools](https://www.w3schools.com/howto/howto_js_countdown.asp) and tweaked to allow users 10 minutes.
+### Content
+
+-   All content was written by the developer.
+
+### Media
+
+-   

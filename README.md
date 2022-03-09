@@ -43,3 +43,15 @@ This is a sports quiz website that allows the user to play a interesting sports 
 - This button opens a modal to display the quiz game instructions, there is close insructions button that closes modal and displays home page again.
 - There is a play game button that directs the user to the game page.
 <img src="assets/images/readme-pictures/instructions.PNG">
+
+#### Game Page
+### Begin Quiz Section
+- You are greeted with a welcome message and a start game button.
+- This will begin game.
+<img src="assets/images/readme-pictures/start-game.PNG">
+
+### Game Question Section
+- The quiz section displays the timer and the current score in the quiz section nav.
+- The question displays just below the nav.
+- User is then given four answers to choose from. 
+<img src="assets/images/readme-pictures/question-one.PNG">

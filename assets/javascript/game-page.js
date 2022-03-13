@@ -3,8 +3,8 @@ let presentQuestion = {};
 let acceptingAnswers = false;
 let counter = 0;
 let remainingQuestions = [];
-const maxQuestions = 11 
-const topFive = 5
+const maxQuestions = 11 ;
+const topFive = 5;
 let questionIncrement = 1;
 let playerScore = 0;
 let questions = [];
@@ -12,7 +12,7 @@ let questionNumber = 0;
 
 // dom selectors
 
-const startGameBtn = document.getElementById("start-game")
+const startGameBtn = document.getElementById("start-game");
 const welcomePage = document.getElementById("welcome-page");
 const gameNav = document.querySelector(".game-nav");
 const questionsDiv = document.getElementById("questions-div")
@@ -23,9 +23,9 @@ let quizQuestionNumber = document.getElementById("quiz-question-number");
 let quizQuestion = document.getElementById("quiz-question");
 const playAgainButton = document.getElementById("play-again-button");
 const resultsPage = document.getElementById("results-page");
-let progress = document.getElementById("progress")
-let loader = document.getElementById("loader")
-let gamesContainer = document.querySelector(".games-container")
+let progress = document.getElementById("progress");
+let loader = document.getElementById("loader");
+let gamesContainer = document.querySelector(".games-container");
 // quiz question buttons
 let optionOne = document.getElementById("option-1-btn");
 let optionTwo = document.getElementById("option-2-btn");
@@ -37,8 +37,8 @@ let checkResultsBtn = document.getElementById("check-results");
 // Game Page Event Listeners
 startGameBtn.addEventListener("click", startGame);
 nextBtn.addEventListener("click", nextQuestion);
-checkResultsBtn.addEventListener("click", checkResults)
-playAgainButton.addEventListener("click", playAgain)
+checkResultsBtn.addEventListener("click", checkResults);
+playAgainButton.addEventListener("click", playAgain);
 
 // Game Page Functions
 
@@ -47,12 +47,12 @@ function startGame() {
     welcomePage.style.display = "none";
     gameNav.style.display = "flex";
     questionsDiv.style.display = "block";
-    remainingQuestions = [... questions]
-    gameScore.textContent = playerScore
-    gameStats()
-    nextQuestion()
+    remainingQuestions = [... questions];
+    gameScore.textContent = playerScore;
+    gameStats();
+    nextQuestion();
     loader.classList.add("hide");
-    gamesContainer.classList.remove("hide")
+    gamesContainer.classList.remove("hide");
 
 }
 // fetch questions from api
@@ -68,11 +68,7 @@ fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=mu
 
         const answerOptions = [...apiQuestion.incorrect_answers];
         editedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-        answerOptions.splice(
-            editedQuestion.answer - 1,
-            0,
-            apiQuestion.correct_answer
-        );
+        answerOptions.splice(editedQuestion.answer - 1, 0, apiQuestion.correct_answer);
 
         answerOptions.forEach((choice, index) => {
             editedQuestion['choice' + (index + 1)] = choice;
@@ -132,8 +128,7 @@ function checkAnswer(answerIndex) {
     } else {
         console.log("wrong");
     }
-    console.log(questions[questionNumber].answers)
-    console.log(answerIndex)
+    
 }
 // function for the next button.
 
@@ -141,19 +136,19 @@ function nextQuestion() {
     
     quizQuestionNumber.innerText = questionIncrement;
     nextBtn.style.display = "none";
-    counter++
-    questionIncrement++
-    progress.style.width = `${(questionIncrement / maxQuestions) * 100}%`
-    const questionIndex = Math.floor( Math.random() * remainingQuestions.length)
-    presentQuestion = remainingQuestions[questionIndex]
-    quizQuestion.textContent = presentQuestion.question
+    counter++;
+    questionIncrement++;
+    progress.style.width = `${(questionIncrement / maxQuestions) * 100}%`;
+    const questionIndex = Math.floor( Math.random() * remainingQuestions.length);
+    presentQuestion = remainingQuestions[questionIndex];
+    quizQuestion.textContent = presentQuestion.question;
     answerBtn.forEach (choice => {
         const number = choice.dataset["number"];
         choice.textContent = presentQuestion["choice" + number] 
     })
     remainingQuestions.splice(questionIndex, 1);
 
-    acceptingAnswers = true
+    acceptingAnswers = true;
 };
 answerBtn.forEach( choice => {
     gameScore.textContent = playerScore
@@ -167,19 +162,29 @@ answerBtn.forEach( choice => {
         if (counter < 10){
             nextBtn.style.display = "block";
         }else if (counter >= 10){
-            checkResultsBtn.style.display = "block"
+            checkResultsBtn.style.display = "block";
             nextBtn.style.display = "none";
         }
         
         choiceSelected.classList.add(classToApply)
         if (classToApply === "success"){
             playerScore++
-            gameScore.textContent = playerScore
+            gameScore.textContent = playerScore;
         }
         nextBtn.addEventListener("click", function () {
-            choiceSelected.classList.remove(classToApply)
+            choiceSelected.classList.remove(classToApply);
         })
         
         
     })
 })
+// Results page
+function checkResults() {
+    // stop timer
+    gameScoreFinale.textContent = playerScore
+    questionsDiv.style.display = "none";
+    resultsPage.style.display = "block"
+    if(remainingQuestions.length === 0){
+        localStorage.setItem("recentScore", playerScore);
+    }
+}

@@ -142,3 +142,16 @@ nav {
     left: 0;
     top: 0;
   }
+  .instructions-container {
+    background-color: #edf5e1;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100%;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  .instructions-container h2 {
+    margin-top: 8rem;
+    font-size: 2em;
+  }

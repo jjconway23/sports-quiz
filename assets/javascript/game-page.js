@@ -34,3 +34,8 @@ let optionFour = document.getElementById("option-4-btn");
 let nextBtn = document.getElementById("next-btn");
 let checkResultsBtn = document.getElementById("check-results");
 
+// Game Page Event Listeners
+startGameBtn.addEventListener("click", startGame);
+nextBtn.addEventListener("click", nextQuestion);
+checkResultsBtn.addEventListener("click", checkResults)
+playAgainButton.addEventListener("click", playAgain)

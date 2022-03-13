@@ -45,3 +45,20 @@ button {
   border: none;
   font-family: "Lexend Deca", sans-serif;
 }
+nav,
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.flex {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+
+.current {
+  border-bottom: 1px solid #05386b;
+}

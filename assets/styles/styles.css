@@ -243,3 +243,22 @@ nav {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  .btn-selction {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  #option-1-btn,
+  #option-2-btn,
+  #option-3-btn,
+  #option-4-btn {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  #next-btn,
+  #check-results {
+    margin-bottom: 3rem;
+  }

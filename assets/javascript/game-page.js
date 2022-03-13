@@ -188,3 +188,10 @@ function checkResults() {
         localStorage.setItem("recentScore", playerScore);
     }
 }
+let username = document.getElementById("username");
+let saveBtn = document.getElementById("save-btn")
+const recentScore = localStorage.getItem("recentScore");
+
+let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+gameScoreFinale.textContent = recentScore

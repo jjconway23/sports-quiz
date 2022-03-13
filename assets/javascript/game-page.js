@@ -129,10 +129,29 @@ function checkAnswer(answerIndex) {
         playerScore++
         gameScore.textContent = playerScore
 
-        // playerScore++
     } else {
         console.log("wrong");
     }
     console.log(questions[questionNumber].answers)
     console.log(answerIndex)
 }
+// function for the next button.
+
+function nextQuestion() {
+    
+    quizQuestionNumber.innerText = questionIncrement;
+    nextBtn.style.display = "none";
+    counter++
+    questionIncrement++
+    progress.style.width = `${(questionIncrement / maxQuestions) * 100}%`
+    const questionIndex = Math.floor( Math.random() * remainingQuestions.length)
+    presentQuestion = remainingQuestions[questionIndex]
+    quizQuestion.textContent = presentQuestion.question
+    answerBtn.forEach (choice => {
+        const number = choice.dataset["number"];
+        choice.textContent = presentQuestion["choice" + number] 
+    })
+    remainingQuestions.splice(questionIndex, 1);
+
+    acceptingAnswers = true
+};

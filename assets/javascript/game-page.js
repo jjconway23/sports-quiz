@@ -85,3 +85,9 @@ fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=mu
 .catch((err) => {
     console.error(err);
 });
+// starts timer and sets player score to 0
+function gameStats() {
+    startTimer()
+    
+
+}

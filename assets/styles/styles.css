@@ -297,3 +297,13 @@ form {
   #save-btn {
     margin-bottom: 1rem;
   }
+ /* High Score Page */
+.high-score-title {
+    margin-bottom: 2rem;
+  }
+  #high-scores-list {
+    list-style-type: none;
+    width: auto;
+    margin: 0 auto 3rem;
+    text-align: start;
+  }

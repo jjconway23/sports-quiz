@@ -39,3 +39,19 @@ startGameBtn.addEventListener("click", startGame);
 nextBtn.addEventListener("click", nextQuestion);
 checkResultsBtn.addEventListener("click", checkResults)
 playAgainButton.addEventListener("click", playAgain)
+
+// Game Page Functions
+
+// starts game upon clicking start game button
+function startGame() {
+    welcomePage.style.display = "none";
+    gameNav.style.display = "flex";
+    questionsDiv.style.display = "block";
+    remainingQuestions = [... questions]
+    gameScore.textContent = playerScore
+    gameStats()
+    nextQuestion()
+    loader.classList.add("hide");
+    gamesContainer.classList.remove("hide")
+
+}

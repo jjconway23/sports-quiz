@@ -87,7 +87,52 @@ fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=mu
 });
 // starts timer and sets player score to 0
 function gameStats() {
-    startTimer()
-    
+    startTimer()   
+}
+function startTimer() {
+    // Set the date we're counting down to
+    let date = new Date();
+    date.setSeconds(date.getSeconds() + 600);
+    var countDownDate = new Date(date).getTime();
 
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="timer"
+        document.getElementById("timer").innerHTML =
+            minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+}
+// checks if button with correct answer is clicked linked to each answer button
+
+function checkAnswer(answerIndex) {
+    if (questions[questionNumber].answers[answerIndex].isCorrect === true) {
+        console.log("correct");
+        playerScore++
+        gameScore.textContent = playerScore
+
+        // playerScore++
+    } else {
+        console.log("wrong");
+    }
+    console.log(questions[questionNumber].answers)
+    console.log(answerIndex)
 }

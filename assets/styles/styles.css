@@ -226,3 +226,8 @@ nav {
     margin-top: 0.5rem;
     font-size: 1.2rem;
   }
+  #progress {
+    height: 2rem;
+    background-color: #05386b;
+    width: 0%;
+  }

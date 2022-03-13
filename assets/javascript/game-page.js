@@ -155,3 +155,31 @@ function nextQuestion() {
 
     acceptingAnswers = true
 };
+answerBtn.forEach( choice => {
+    gameScore.textContent = playerScore
+    choice.addEventListener("click", e => {
+        if(!acceptingAnswers)return;
+        acceptingAnswers = false;
+        const choiceSelected = e.target; // which button was clicked
+        const answerSelected = choiceSelected.dataset ['number'];  //dataset number of button clicked
+        const classToApply = answerSelected == presentQuestion.answer ? "success" : "fail"
+        
+        if (counter < 10){
+            nextBtn.style.display = "block";
+        }else if (counter >= 10){
+            checkResultsBtn.style.display = "block"
+            nextBtn.style.display = "none";
+        }
+        
+        choiceSelected.classList.add(classToApply)
+        if (classToApply === "success"){
+            playerScore++
+            gameScore.textContent = playerScore
+        }
+        nextBtn.addEventListener("click", function () {
+            choiceSelected.classList.remove(classToApply)
+        })
+        
+        
+    })
+})

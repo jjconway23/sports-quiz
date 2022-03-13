@@ -106,3 +106,14 @@ nav {
   margin-bottom: 3rem;
   font-size: 1.25em;
 }
+.btn {
+    margin-bottom: 1.375rem;
+  }
+  
+  .game-page-link,
+  .high-score-link {
+    text-decoration: none;
+    padding: 1.7rem 5.1rem;
+    font-size: 16px;
+    color: #edf5e1;
+  }

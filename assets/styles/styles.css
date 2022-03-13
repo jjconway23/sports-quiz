@@ -1,0 +1,25 @@
+/*-------------------- 
+Color Scheme:
+Navy - #05386b
+Mint - #379683
+Green - #5CDB95
+Green 2 - #8EE4AF
+Cream - #EDF5E1
+---------------------------*/
+/* Global Styles */
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #edf5e1;
+  color: #05386b;
+  text-transform: capitalize;
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-family: "Lexend Deca", sans-serif;
+}

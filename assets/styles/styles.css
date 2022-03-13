@@ -87,3 +87,10 @@ nav {
     color: #379683;
     border-bottom: none;
   }
+  /* Main Content */
+
+.container {
+    text-align: center;
+    flex-direction: column;
+    color: #05386b;
+  }

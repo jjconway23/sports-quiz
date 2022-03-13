@@ -216,3 +216,19 @@ username.addEventListener("keyup", function (){
       window.location.assign("/")
   
   }
+  function playAgain() {
+    
+    playerScore = 0;
+    resultsPage.style.display = "none";
+    counter = 0;
+    questionIncrement = 1;
+    questionNumber = 0;
+    gameScore.textContent = playerScore;
+    checkResultsBtn.style.display = "none";
+    answerBtn.forEach (btn => {
+        btn.classList.remove("success");
+        btn.classList.remove("fail");
+    })
+  }
+    // startGame()
+    // startTimer()

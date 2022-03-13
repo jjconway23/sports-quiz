@@ -216,3 +216,13 @@ nav {
   .score {
     margin-right: 2.25rem;
   }
+  #progress-bar {
+    margin: 0.5rem auto 0;
+    width: 10rem;
+    border: 2px solid #05386b;
+    height: 2rem;
+  }
+  #question-counter {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }

@@ -94,3 +94,15 @@ nav {
     flex-direction: column;
     color: #05386b;
   }
+  .container h2 {
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 2em;
+}
+
+.welcome-text {
+  padding: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.25em;
+}

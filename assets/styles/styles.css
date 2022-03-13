@@ -337,3 +337,33 @@ footer a {
   color: #edf5e1;
   padding: 1rem 1.5rem;
 }
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 789px) {
+    .container {
+      width: 90%;
+    }
+    .games-container {
+      width: 100%;
+    }
+    /* Site Nav */
+    nav {
+      flex-direction: column;
+    }
+    .title {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    nav ul li {
+      text-align: center;
+    }
+    /* game nav */
+    #timer {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    #next-btn {
+      height: 74px;
+      width: 201.59px;
+    }
+  }

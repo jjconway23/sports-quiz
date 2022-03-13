@@ -231,3 +231,15 @@ nav {
     background-color: #05386b;
     width: 0%;
   }
+  #questions-div {
+    display: none;
+  }
+  
+  #play-again-button {
+    margin-bottom: 10rem;
+  }
+  
+  .games-container h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }

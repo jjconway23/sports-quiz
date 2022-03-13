@@ -262,3 +262,19 @@ nav {
   #check-results {
     margin-bottom: 3rem;
   }
+  #results-page,
+#check-results {
+  display: none;
+}
+#results-page > p {
+  margin-bottom: 2rem;
+}
+
+.success {
+  box-shadow: -5px -5px 30px 5px green, 5px 5px 30px 5px greenyellow;
+}
+
+.fail {
+  border: 2px solid red;
+  box-shadow: -5px -5px 30px 5px red, 5px 5px 30px 5px orangered;
+}

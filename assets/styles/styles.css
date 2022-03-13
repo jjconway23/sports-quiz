@@ -155,3 +155,12 @@ nav {
     margin-top: 8rem;
     font-size: 2em;
   }
+  ol {
+    margin: 2rem auto;
+    list-style-type: none;
+  }
+  
+  ol li {
+    line-height: 1.75rem;
+    font-size: 1.25em;
+  }

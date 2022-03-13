@@ -173,7 +173,7 @@ nav {
 #loader {
     border: 1rem solid white;
     border-radius: 50%;
-    border-top: 1rem solid #05386b;;
+    border-top: 1rem solid #05386b;
     width: 4rem;
     height: 4rem;
     margin: 7rem auto 0;
@@ -200,4 +200,19 @@ nav {
   #start-game-btn {
     margin-bottom: 5rem;
   }
+  .game-nav {
+    background-color: #05386b;
+    min-height: 3rem;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+  }
   
+  #timer {
+    margin-left: 2.25rem;
+  }
+  
+  .score {
+    margin-right: 2.25rem;
+  }

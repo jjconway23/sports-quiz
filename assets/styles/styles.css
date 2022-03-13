@@ -117,3 +117,16 @@ nav {
     font-size: 16px;
     color: #edf5e1;
   }
+  .game-page-link:visited {
+    color: #edf5e1;
+  }
+  .play-game-btn,
+  .high-score-btn {
+    margin: 0 auto 1.5rem;
+    cursor: pointer;
+    background: #05386b;
+    color: #edf5e1;
+    border-radius: 5px;
+    border: none;
+    align-items: center;
+  }

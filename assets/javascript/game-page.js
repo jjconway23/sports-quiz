@@ -55,3 +55,33 @@ function startGame() {
     gamesContainer.classList.remove("hide")
 
 }
+// fetch questions from api
+fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple")
+.then((res) => {
+    return res.json();
+})
+.then((apiQuestions) => {
+    questions = apiQuestions.results.map((apiQuestion) => {
+        const editedQuestion = {
+            question: apiQuestion.question,
+        };
+
+        const answerOptions = [...apiQuestion.incorrect_answers];
+        editedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+        answerOptions.splice(
+            editedQuestion.answer - 1,
+            0,
+            apiQuestion.correct_answer
+        );
+
+        answerOptions.forEach((choice, index) => {
+            editedQuestion['choice' + (index + 1)] = choice;
+        });
+
+        return editedQuestion;
+    });
+    startGame();
+})
+.catch((err) => {
+    console.error(err);
+});

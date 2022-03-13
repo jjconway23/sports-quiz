@@ -193,3 +193,11 @@ nav {
     margin: 0 auto;
     color: #edf5e1;
   }
+  #welcome-page {
+    padding: 4rem;
+  }
+  
+  #start-game-btn {
+    margin-bottom: 5rem;
+  }
+  

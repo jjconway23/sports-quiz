@@ -169,3 +169,21 @@ nav {
     margin-bottom: 3rem;
     font-size: 1.5em;
   }
+/* Games Page */
+#loader {
+    border: 1rem solid white;
+    border-radius: 50%;
+    border-top: 1rem solid #05386b;;
+    width: 4rem;
+    height: 4rem;
+    margin: 7rem auto 0;
+    animation: spin 2s linear infinite
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg)
+    }
+  }

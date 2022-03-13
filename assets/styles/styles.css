@@ -23,3 +23,25 @@ body {
   overflow-x: hidden;
   font-family: "Lexend Deca", sans-serif;
 }
+h1,
+h2,
+h3 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  width: 16em;
+  padding: 1.75rem 2rem;
+  margin: auto;
+  cursor: pointer;
+  background: #05386b;
+  color: #edf5e1;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+}

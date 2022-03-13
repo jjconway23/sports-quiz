@@ -291,3 +291,9 @@ form {
     border: 1px solid #05386b;
     border-radius: 3px;
   }
+  form > input::placeholder {
+    color: #05386b;
+  }
+  #save-btn {
+    margin-bottom: 1rem;
+  }

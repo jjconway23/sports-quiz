@@ -39,34 +39,34 @@ This is a sports quiz website that allows the user to play a interesting sports 
 #### Navigation
 - Positioned at the top of the page. On the left it has the site name Sports Quiz along with the slogan sligtly below it. 
 - To the right it has the two main pages of the site. Home Page and Game Page. With an underline under the current page the visitor is on.
-<img src="assets/images/readme-pictures/home-page.PNG">
+<img src="readme-pictures/home-page.PNG">
 
 #### Instructions Button 
 - This button opens a modal to display the quiz game instructions, there is close insructions button that closes modal and displays home page again.
 - There is a play game button that directs the user to the game page.
-<img src="assets/images/readme-pictures/instructions.PNG">
+<img src="readme-pictures/instructions.PNG">
 
 #### Game Page
 ### Begin Quiz Section
 - You are greeted with a welcome message and a start game button.
 - This will begin game.
-<img src="assets/images/readme-pictures/start-game.PNG">
+<img src="readme-pictures/start-game.PNG">
 
 ### Game Question Section
 - The quiz section displays the timer and the current score in the quiz section nav.
 - The question displays just below the nav.
 - User is then given four answers to choose from. 
-<img src="assets/images/readme-pictures/question-one.PNG">
+<img src="readme-pictures/question-one.PNG">
 
 #### Results Section
 - The results section shows the user score, shows a congratulatory message and others the user to take quiz again with the play again button.
 - This then sets everything back to zero and user can try again at the quiz.
-<img src="assets/images/readme-pictures/results-page.PNG">
+<img src="readme-pictures/results-page.PNG">
 
 #### Footer
 - The footer has links which use font awesome fonts for facebook, youtube, twitter and instagram accounts.
 - When links are clicked on they open our social media accounts in a new tab.
-<img src="assets/images/readme-pictures/footer.PNG">
+<img src="readme-pictures/footer.PNG">
 
 ### Languages Used
 

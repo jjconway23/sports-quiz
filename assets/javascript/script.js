@@ -11,3 +11,7 @@ closeInstructions.addEventListener("click", closeInstructionsContainer);
 function openInstructions() {
     instructionsContainer.style.display = "block";
 }
+// closes instructions
+function closeInstructionsContainer() {
+    instructionsContainer.style.display = "none";
+}

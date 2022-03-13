@@ -187,3 +187,9 @@ nav {
       transform: rotate(360deg)
     }
   }
+  .games-container {
+    background-color: #8ee4af;
+    width: 75%;
+    margin: 0 auto;
+    color: #edf5e1;
+  }

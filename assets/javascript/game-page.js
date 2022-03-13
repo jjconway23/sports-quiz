@@ -41,7 +41,6 @@ checkResultsBtn.addEventListener("click", checkResults);
 playAgainButton.addEventListener("click", playAgain);
 
 // Game Page Functions
-
 // starts game upon clicking start game button
 function startGame() {
     welcomePage.style.display = "none";
@@ -213,7 +212,8 @@ username.addEventListener("keyup", function (){
   
       localStorage.setItem("highScores" , JSON.stringify(highScores));
   
-      window.location.assign("/")
+    //   window.location.assign("/")
+    window.location.href="index.html"
   
   }
   function playAgain() {

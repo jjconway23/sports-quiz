@@ -342,6 +342,7 @@ footer a {
 @media (min-width: 320px) and (max-width: 789px) {
     .container {
       width: 90%;
+      padding: 20px;
     }
     .games-container {
       width: 100%;
@@ -354,8 +355,15 @@ footer a {
       margin-bottom: 1rem;
       text-align: center;
     }
+    
     nav ul li {
       text-align: center;
+    }
+    .instructions-container{
+      text-align: left;
+    }
+    .instructions-container ol {
+      list-style-type: decimal;
     }
     /* game nav */
     #timer {
@@ -365,5 +373,6 @@ footer a {
     #next-btn {
       height: 74px;
       width: 201.59px;
+      margin-bottom: 150px;
     }
   }

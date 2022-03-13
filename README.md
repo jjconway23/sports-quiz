@@ -1,6 +1,6 @@
 <h1 align="center">Sports Quiz</h1>
 
-[View the live project here.](https://jjconway23.github.io/portfolio-project-2/)
+[View the live project here.](https://jjconway23.github.io/sports-quiz/)
 
 This is a sports quiz website that allows the user to play a interesting sports quiz which tests the users sports knowledge in 7 different sports. It has a home page, which was designed to be minimalistic and incudes two buttons; instructions and play game. When clicking instructions it will display the game instructions and when clicking play game it takes you to the game page. On the game page you will have the play button which begins the quiz. It was designed responsively so devices from phones to monitors can view them.
 
@@ -18,10 +18,12 @@ This is a sports quiz website that allows the user to play a interesting sports 
     
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to see new sports quizes added
+        1. As a Returning Visitor, I want to see new sports quizes added.
+        2. As a Returning Visitor, I want to see if i can beat my old high score.
 
     -   #### Frequent User Goals
         1. As a Frequent User, I want to check to see if there are any newly added sports quizes added
+        2. As a Frequesnt User, I want to challenge myself by taking these quizes and to see if i can get a better score.
 
 -   ### Design
     -   #### Colour Scheme
@@ -107,7 +109,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         1. The website is fluid, designed with UX at the top of my priorities. Each page has  navigation bar, each link descriptive and is designed so that the user can easily remember the design of my page after a couple clicks.
         2. At the bottom of each page there is links to our social media accounts.
         
-    3. As a First Time Visitor, I want to look for a link directing me to what ive come to the site for. Attempting my Quiz.
+    3. As a First Time Visitor, I want to look for a link directing me to what ive come to the site for. Attempting a sports Quiz.
         1. Once the new visitor has arrived on the page they are immediately met with a header that explains what the site is for. 
         2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
 

@@ -156,8 +156,10 @@ nav {
     font-size: 2em;
   }
   ol {
+    
     margin: 2rem auto;
-    list-style-type: none;
+    width: 70%;
+    text-align: left;
   }
   
   ol li {

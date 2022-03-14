@@ -38,7 +38,7 @@ This is a sports quiz website that allows the user to play a interesting sports 
 
 #### Navigation
 - Positioned at the top of the page. On the left it has the site name Sports Quiz along with the slogan sligtly below it. 
-- To the right it has the two main pages of the site. Home Page and Game Page. With an underline under the current page the visitor is on.
+- To the right it has the two main pages of the site. Home Page and High Scores Page. With an underline under the current page the visitor is on.
 <img src="readme-pictures/home-page.PNG">
 
 #### Instructions Button 
@@ -48,20 +48,27 @@ This is a sports quiz website that allows the user to play a interesting sports 
 
 #### Game Page
 ### Begin Quiz Section
-- You are greeted with a welcome message and a start game button.
-- This will begin game.
+- You are greeted with a spinning loader which spins for 2 seconds.
+- Once loader has spun, it will display the question and at this point the quiz will begin.
 <img src="readme-pictures/start-game.PNG">
 
 ### Game Question Section
 - The quiz section displays the timer and the current score in the quiz section nav.
+- A question counter and a progress bar to let the user know what question they are on, and how much questions they have left.
 - The question displays just below the nav.
 - User is then given four answers to choose from. 
 <img src="readme-pictures/question-one.PNG">
 
 #### Results Section
-- The results section shows the user score, shows a congratulatory message and others the user to take quiz again with the play again button.
-- This then sets everything back to zero and user can try again at the quiz.
+- The results section shows the a congratulatory message, then how much the user scored on the quiz.
+- There is also an input form with a text box and a save button to allow the user to save their high score.
+- Lastly a play again button. This then sets everything back to zero and user can try again at the quiz.
 <img src="readme-pictures/results-page.PNG">
+
+#### High Scores Page
+- The high scores page allows the user to see their top 5 scores displaying the username they entered and their score.
+- On this page there is also a play again button.
+<img src="readme-pictures/high-scores-empty"> <img src="readme-pictures/high-scores-1">
 
 #### Footer
 - The footer has links which use font awesome fonts for facebook, youtube, twitter and instagram accounts.
@@ -98,15 +105,15 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   #### First Time Visitor Goals
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about quiz in question.
+    1. As a First Time Visitor, I want to easily understand the main purpose of the site and have my own attempt at the sports quiz.
 
         1. Upon entering the site, users are automatically greeted with a clean and easily readable header and navigation bar to go to the page of their choice.
-        2. The main points on the homepage are the instructions button and play game button.
-        3. The user can either click the play now button or use the game page link in the navigation bar at the top of the page.
+        2. The main points on the homepage are the instructions button, play game button and the high scores button.
+        3. The user can click the play now button to attempt the quiz.
 
     2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
 
-        1. The website is fluid, designed with UX at the top of my priorities. Each page has  navigation bar, each link descriptive and is designed so that the user can easily remember the design of my page after a couple clicks.
+        1. The website is fluid, designed with UX at the top of my priorities. Each page has navigation bar, each link descriptive and is designed so that the user can easily remember the design of my page after a couple clicks.
         2. At the bottom of each page there is links to our social media accounts.
         
     3. As a First Time Visitor, I want to look for a link directing me to what ive come to the site for. Attempting a sports Quiz.
@@ -115,9 +122,10 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   #### Returning Visitor Goals
 
-    1. As a Returning Visitor, I want play quiz again to test my knowledge.
+    1. As a Returning Visitor, I want play quiz again to test my knowledge and see if i can beat my previous score.
 
-        1. Responsive site can be played again on any device screen size.
+        1. The user can easily attempt the quiz again and have their score saved to local storage.
+        2. Responsive site can be played again on any device screen size.
 
 -   #### Frequent User Goals
 
@@ -134,7 +142,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
--   Margin issue on smaller screens
 
 ## Deployment
 
@@ -167,3 +174,4 @@ The project was deployed to GitHub Pages using the following steps...
 - W3c
 - Scrimba
 - Codecademy
+- James Q Quick Youtube videos

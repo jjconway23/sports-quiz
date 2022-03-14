@@ -183,7 +183,10 @@ function checkResults() {
     gameScoreFinale.textContent = playerScore
     questionsDiv.style.display = "none";
     resultsPage.style.display = "block"
-    if(remainingQuestions.length === 0){
+    // if(remainingQuestions.length === 0){
+    //     localStorage.setItem("recentScore", playerScore);
+    // }
+    if(checkResultsBtn.style.display === "block"){
         localStorage.setItem("recentScore", playerScore);
     }
 }

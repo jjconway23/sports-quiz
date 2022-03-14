@@ -140,10 +140,10 @@ function nextQuestion() {
     progress.style.width = `${(questionIncrement / maxQuestions) * 100}%`;
     const questionIndex = Math.floor( Math.random() * remainingQuestions.length);
     presentQuestion = remainingQuestions[questionIndex];
-    quizQuestion.textContent = presentQuestion.question;
+    quizQuestion.innerHTML = presentQuestion.question;
     answerBtn.forEach (choice => {
         const number = choice.dataset["number"];
-        choice.textContent = presentQuestion["choice" + number] 
+        choice.innerHTML = presentQuestion["choice" + number] 
     })
     remainingQuestions.splice(questionIndex, 1);
 
@@ -230,5 +230,4 @@ username.addEventListener("keyup", function (){
         btn.classList.remove("fail");
     })
   }
-    // startGame()
-    // startTimer()
+  

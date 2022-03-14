@@ -68,7 +68,7 @@ This is a sports quiz website that allows the user to play a interesting sports 
 #### High Scores Page
 - The high scores page allows the user to see their top 5 scores displaying the username they entered and their score.
 - On this page there is also a play again button.
-<img src="readme-pictures/high-scores-empty"> <img src="readme-pictures/high-scores-1">
+<img src="readme-pictures/high-scores-empty.PNG"> <img src="readme-pictures/high-scores-1.PNG">
 
 #### Footer
 - The footer has links which use font awesome fonts for facebook, youtube, twitter and instagram accounts.

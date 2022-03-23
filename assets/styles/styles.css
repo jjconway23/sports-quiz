@@ -255,10 +255,12 @@ nav {
     margin-top: 1rem;
     margin-bottom: 3rem;
   }
-  
   #next-btn,
   #check-results {
     margin-bottom: 3rem;
+    color: #05386b;
+    background-color: #edf5e1;
+    font-weight: bold;
   }
   #results-page,
 #check-results {

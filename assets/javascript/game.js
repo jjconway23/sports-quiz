@@ -244,16 +244,7 @@ username.addEventListener("keyup", function (){
   }
   function playAgain() {
     
-    playerScore = 0;
-    resultsPage.style.display = "none";
-    counter = 0;
-    questionIncrement = 1;
-    questionNumber = 0;
-    gameScore.textContent = playerScore;
-    checkResultsBtn.style.display = "none";
-    answerBtn.forEach (btn => {
-        btn.classList.remove("success");
-        btn.classList.remove("fail");
-    })
+    
+    window.location.href="game.html"
   }
   

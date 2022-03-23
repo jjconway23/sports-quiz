@@ -101,7 +101,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
+-   #### First Time Visitor
 
     1. As a First Time Visitor, I want to easily understand the main purpose of the site and have my own attempt at the sports quiz.
 
@@ -118,14 +118,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
         1. Once the new visitor has arrived on the page they are immediately met with a header that explains what the site is for. 
         2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
 
--   #### Returning Visitor Goals
+-   #### Returning Visitor
 
     1. As a Returning Visitor, I want play quiz again to test my knowledge and see if i can beat my previous score.
 
         1. The user can easily attempt the quiz again and have their score saved to local storage.
         2. Responsive site can be played again on any device screen size.
 
--   #### Frequent User Goals
+-   #### Frequent User
 
     1. As a Frequent User, I want to check to see if there are new games added.
 
@@ -140,6 +140,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
+- After submitting the form, the name shows in the high scores page but the score returns as null
+
 
 ## Deployment
 
@@ -148,11 +150,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 The project was deployed to GitHub Pages using the following steps...
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
+2. At the top of the Repository (not top of page), locate the ***Settings*** Button on the menu.
+3. Scroll down the Settings page until you locate the ***GitHub Pages*** Section.
+4. Under ***Source***, click the dropdown called ***None*** and select ***Master Branch***.
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://github.com) in the ***GitHub Pages*** section.
 
 ## Credits
 

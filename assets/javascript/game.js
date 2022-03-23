@@ -25,7 +25,8 @@ let remainingQuestions = [];
 let questionIncrement = 1;
 let playerScore = 0;
 let questionNumber = 0;
-
+let nextQuestionTimeOut;
+let checkResultsTimeOut;
 
 
 
@@ -124,10 +125,62 @@ function checkAnswer(answerIndex) {
     }
     
 }
-// function for the next button.
+
+answerBtn.forEach( choice => {
+    gameScore.textContent = playerScore
+    choice.addEventListener("click", e => {
+        if(!acceptingAnswers)return;
+        acceptingAnswers = false;
+        const choiceSelected = e.target; // which button was clicked
+        const answerSelected = choiceSelected.dataset ['number'];  //dataset number of button clicked
+        const classToApply = answerSelected == presentQuestion.answer ? "success" : "fail"
+        
+        if (counter < 10){
+            nextBtn.style.display = "block";
+            nextQuestionTimeOut = 
+                setTimeout( () => {
+                    nextQuestion()
+                    choiceSelected.classList.remove(classToApply);
+                }, 3000);
+            
+        }else if (counter >= 10){
+            checkResultsBtn.style.display = "block";
+            nextBtn.style.display = "none";
+            checkResultsTimeOut =
+                setTimeout( () => {
+                    checkResults()
+                    choiceSelected.classList.remove(classToApply);
+                }, 3000);
+                
+        }
+        
+        choiceSelected.classList.add(classToApply)
+        if (classToApply === "success"){
+            playerScore++
+            gameScore.textContent = playerScore;
+        }
+        nextBtn.addEventListener("click", function () {
+            choiceSelected.classList.remove(classToApply);
+        })
+        
+        
+    })
+})
 
 function nextQuestion() {
-    
+    // answerBtn.forEach( choice => {
+    //     choice.addEventListener("click", e  =>{
+    //         const btnSelected = e.target;
+    //         const answerSelected = btnSelected.dataset ['number'];
+    //         const classApply = answerSelected == presentQuestion.answer ? "success" : "fail"
+            
+    //         btnSelected.classList.remove(classApply); 
+    //     })
+        
+
+
+    // })
+    clearTimeout(nextQuestionTimeOut)
     quizQuestionNumber.innerText = questionIncrement;
     nextBtn.style.display = "none";
     counter++;
@@ -144,36 +197,11 @@ function nextQuestion() {
 
     acceptingAnswers = true;
 };
-answerBtn.forEach( choice => {
-    gameScore.textContent = playerScore
-    choice.addEventListener("click", e => {
-        if(!acceptingAnswers)return;
-        acceptingAnswers = false;
-        const choiceSelected = e.target; // which button was clicked
-        const answerSelected = choiceSelected.dataset ['number'];  //dataset number of button clicked
-        const classToApply = answerSelected == presentQuestion.answer ? "success" : "fail"
-        
-        if (counter < 10){
-            nextBtn.style.display = "block";
-        }else if (counter >= 10){
-            checkResultsBtn.style.display = "block";
-            nextBtn.style.display = "none";
-        }
-        
-        choiceSelected.classList.add(classToApply)
-        if (classToApply === "success"){
-            playerScore++
-            gameScore.textContent = playerScore;
-        }
-        nextBtn.addEventListener("click", function () {
-            choiceSelected.classList.remove(classToApply);
-        })
-        
-        
-    })
-})
+
+
 // Results page
 function checkResults() {
+    clearTimeout(checkResultsTimeOut)
     // stop timer
     gameScoreFinale.textContent = playerScore
     questionsDiv.style.display = "none";

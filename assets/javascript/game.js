@@ -110,19 +110,7 @@ function startTimer() {
         }
     }, 1000);
 }
-// checks if button with correct answer is clicked linked to each answer button
 
-function checkAnswer(answerIndex) {
-    if (questions[questionNumber].answers[answerIndex].isCorrect === true) {
-        console.log("correct");
-        playerScore++
-        gameScore.textContent = playerScore
-
-    } else {
-        console.log("wrong");
-    }
-    
-}
 
 answerBtn.forEach( choice => {
     gameScore.textContent = playerScore

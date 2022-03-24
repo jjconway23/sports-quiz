@@ -29,28 +29,27 @@ let nextQuestionTimeOut;
 let checkResultsTimeOut;
 
 
-
-// Game Page Event Listeners
 startGameBtn.addEventListener("click", startGame);
 nextBtn.addEventListener("click", nextQuestion);
 checkResultsBtn.addEventListener("click", checkResults);
 playAgainButton.addEventListener("click", playAgain);
 
-// Game Page Functions
-// starts game upon clicking start game button
+/**
+ * starts game
+ */
 function startGame() {
     welcomePage.style.display = "none";
     gameNav.style.display = "flex";
     questionsDiv.style.display = "block";
     remainingQuestions = [... questions];
     gameScore.textContent = playerScore;
-    gameStats();
+    startTimer()
     nextQuestion();
     loader.classList.add("hide");
     gamesContainer.classList.remove("hide");
 
 }
-// fetch questions from api
+
 fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple")
 .then((res) => {
     return res.json();
@@ -76,36 +75,35 @@ fetch("https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=mu
 .catch((err) => {
     console.error(err);
 });
-// starts timer and sets player score to 0
-function gameStats() {
-    startTimer()   
-}
+/**
+ * Starts Timer
+ */
 function startTimer() {
-    // Set the date we're counting down to
+    
     let date = new Date();
     date.setSeconds(date.getSeconds() + 600);
-    var countDownDate = new Date(date).getTime();
+    let countDownDate = new Date(date).getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+    
+    let x = setInterval(function() {
 
-        // Get today's date and time
-        var now = new Date().getTime();
+        
+        let now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+        
+        let distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="timer"
+        
         document.getElementById("timer").innerHTML =
             minutes + "m " + seconds + "s ";
 
-        // If the count down is finished, write some text
+        
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("timer").innerHTML = "EXPIRED";

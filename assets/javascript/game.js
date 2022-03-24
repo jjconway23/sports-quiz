@@ -157,9 +157,13 @@ answerBtn.forEach( choice => {
         
     })
 })
-
+/**
+ * clears timeout hooked onto the next quesiton button
+ * sets next question and relevent answer choices
+ * increments question number and counter
+ */
 function nextQuestion() {
-    clearTimeout(nextQuestionTimeOut)
+    clearTimeout(nextQuestionTimeOut);
     quizQuestionNumber.innerText = questionIncrement;
     nextBtn.style.display = "none";
     counter++;
@@ -176,24 +180,23 @@ function nextQuestion() {
 
     acceptingAnswers = true;
 };
-
-
-// Results page
+/**
+ * displays the check results page
+ * sets users recent score to the local storage
+ */
 function checkResults() {
     clearTimeout(checkResultsTimeOut)
     // stop timer
     gameScoreFinale.textContent = playerScore
     questionsDiv.style.display = "none";
-    resultsPage.style.display = "block"
-    // if(remainingQuestions.length === 0){
-    //     localStorage.setItem("recentScore", playerScore);
-    // }
+    resultsPage.style.display = "block";
     if(checkResultsBtn.style.display === "block"){
         localStorage.setItem("recentScore", playerScore);
     }
 }
+
 let username = document.getElementById("username");
-let saveBtn = document.getElementById("save-btn")
+let saveBtn = document.getElementById("save-btn");
 const recentScore = localStorage.getItem("recentScore");
 
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
@@ -221,9 +224,10 @@ username.addEventListener("keyup", function (){
     window.location.href="index.html"
   
   }
+  /**
+   * starts game again when play again button is clicked
+   */
   function playAgain() {
-    
-    
     window.location.href="game.html"
   }
   

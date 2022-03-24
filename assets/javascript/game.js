@@ -111,14 +111,19 @@ function startTimer() {
     }, 1000);
 }
 
-
+/**
+ * checks whether button user clicked is the correct answer
+ * displays next button once user clicks an answer button
+ * displays check results button once finally question has been answered
+ * decides what class to apply to the button whether user has chosen the correct answer or not
+ */
 answerBtn.forEach( choice => {
     gameScore.textContent = playerScore
     choice.addEventListener("click", e => {
         if(!acceptingAnswers)return;
         acceptingAnswers = false;
-        const choiceSelected = e.target; // which button was clicked
-        const answerSelected = choiceSelected.dataset ['number'];  //dataset number of button clicked
+        const choiceSelected = e.target;
+        const answerSelected = choiceSelected.dataset ['number'];
         const classToApply = answerSelected == presentQuestion.answer ? "success" : "fail"
         
         if (counter < 10){
@@ -154,18 +159,6 @@ answerBtn.forEach( choice => {
 })
 
 function nextQuestion() {
-    // answerBtn.forEach( choice => {
-    //     choice.addEventListener("click", e  =>{
-    //         const btnSelected = e.target;
-    //         const answerSelected = btnSelected.dataset ['number'];
-    //         const classApply = answerSelected == presentQuestion.answer ? "success" : "fail"
-            
-    //         btnSelected.classList.remove(classApply); 
-    //     })
-        
-
-
-    // })
     clearTimeout(nextQuestionTimeOut)
     quizQuestionNumber.innerText = questionIncrement;
     nextBtn.style.display = "none";
@@ -224,7 +217,7 @@ username.addEventListener("keyup", function (){
   
       localStorage.setItem("highScores" , JSON.stringify(highScores));
   
-    //   window.location.assign("/")
+    
     window.location.href="index.html"
   
   }

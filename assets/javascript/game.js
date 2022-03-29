@@ -209,7 +209,7 @@ username.addEventListener("keyup", function (){
       event.preventDefault();
   
       const score = {
-          score: recentScore,
+          score: localStorage.getItem("recentScore"),
           name: username.value
           
           

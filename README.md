@@ -140,7 +140,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ### Known Bugs
 
-- After submitting the form, the name shows in the high scores page but the score returns as null
+- After submitting the form, the name shows in the high scores page but the score returns as null. This was fixed by setting the local storage reference, directly on to the score key within the score object/
 
 
 ## Deployment

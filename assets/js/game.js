@@ -19,18 +19,19 @@ const gameScoreFinale = document.querySelector(".results-score");
 const maxQuestions = 11 ;
 const topFive = 5;
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+let username = document.getElementById("username");
+let saveBtn = document.getElementById("save-btn");
 let questions = [];
 let presentQuestion = {}; 
+let remainingQuestions = [];
 let acceptingAnswers = false;
 let counter = 0;
-let remainingQuestions = [];
 let questionIncrement = 1;
 let playerScore = 0;
 let questionNumber = 0;
 let nextQuestionTimeOut;
 let checkResultsTimeOut;
-let username = document.getElementById("username");
-let saveBtn = document.getElementById("save-btn");
+
 
 
 

@@ -1,22 +1,24 @@
-const startGameBtn = document.getElementById("start-game");
-const welcomePage = document.getElementById("welcome-page");
+const startGameBtn = document.querySelector("#start-game");
+const welcomePage = document.querySelector("#welcome-page");
+const questionsDiv = document.querySelector("#questions-div")
+const timer = document.querySelector("#timer");
+const quizQuestionNumber = document.querySelector("#quiz-question-number");
+const quizQuestion = document.querySelector("#quiz-question");
+const playAgainButton = document.querySelector("#play-again-button");
+const resultsPage = document.querySelector("#results-page");
+const progress = document.querySelector("#progress");
+const loader = document.querySelector("#loader");
+const nextBtn = document.querySelector("#next-btn");
+const checkResultsBtn = document.querySelector("#check-results");
+const answerBtn = Array.from(document.getElementsByClassName("answer-btn"));
+const recentScore = localStorage.getItem("recentScore");
+const gamesContainer = document.querySelector(".games-container");
 const gameNav = document.querySelector(".game-nav");
-const questionsDiv = document.getElementById("questions-div")
-const timer = document.getElementById("timer");
 const gameScore = document.querySelectorAll(".game-score")[0];
 const gameScoreFinale = document.querySelector(".results-score");
-const quizQuestionNumber = document.getElementById("quiz-question-number");
-const quizQuestion = document.getElementById("quiz-question");
-const playAgainButton = document.getElementById("play-again-button");
-const resultsPage = document.getElementById("results-page");
-const progress = document.getElementById("progress");
-const loader = document.getElementById("loader");
-const gamesContainer = document.querySelector(".games-container");
-const nextBtn = document.getElementById("next-btn");
-const checkResultsBtn = document.getElementById("check-results");
-const answerBtn = Array.from(document.getElementsByClassName("answer-btn"));
 const maxQuestions = 11 ;
 const topFive = 5;
+let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 let questions = [];
 let presentQuestion = {}; 
 let acceptingAnswers = false;
@@ -27,6 +29,9 @@ let playerScore = 0;
 let questionNumber = 0;
 let nextQuestionTimeOut;
 let checkResultsTimeOut;
+let username = document.getElementById("username");
+let saveBtn = document.getElementById("save-btn");
+
 
 
 startGameBtn.addEventListener("click", startGame);
@@ -82,30 +87,18 @@ function startTimer() {
     
     let date = new Date();
     date.setSeconds(date.getSeconds() + 600);
-    let countDownDate = new Date(date).getTime();
-
-    
-    let x = setInterval(function() {
-
-        
-        let now = new Date().getTime();
-
-        
-        let distance = countDownDate - now;
-
-        
+    let countDownDate = date.getTime();    
+    let time = setInterval(function() {        
+        let now = new Date().getTime();        
+        let distance = countDownDate - now;        
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);        
         document.getElementById("timer").innerHTML =
-            minutes + "m " + seconds + "s ";
-
-        
+            minutes + "m " + seconds + "s ";        
         if (distance < 0) {
-            clearInterval(x);
+            clearInterval(time);
             document.getElementById("timer").innerHTML = "EXPIRED";
         }
     }, 1000);
@@ -186,7 +179,6 @@ function nextQuestion() {
  */
 function checkResults() {
     clearTimeout(checkResultsTimeOut)
-    // stop timer
     gameScoreFinale.textContent = playerScore
     questionsDiv.style.display = "none";
     resultsPage.style.display = "block";
@@ -195,15 +187,11 @@ function checkResults() {
     }
 }
 
-let username = document.getElementById("username");
-let saveBtn = document.getElementById("save-btn");
-const recentScore = localStorage.getItem("recentScore");
-
-let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-
 gameScoreFinale.textContent = recentScore
+
 username.addEventListener("keyup", function (){ 
     saveBtn.disabled = !username.value  
+    
   })
   saveScore = (event) => {
       event.preventDefault();
